@@ -20,8 +20,12 @@ EmptyRoomCheck
   - lignt on (형광등 켜짐)
     - 말 없이 모니터만 보고 키보드 치는 소리만 남 (e.g.장애 분석중)
 
-사용할 센서
---------
-- 조도 (밝기 감지)
-- 소리 (사람의 소리 감지)
+사용할 센서 
+---------
+센서 타입 선태 필요: analog or digital 
 
+- 조도 (CDS, Photoresistor sensor)
+  - LM393
+  - [light sensor 사용 예제](https://learn.adafruit.com/basic-resistor-sensor-reading-on-raspberry-pi/basic-photocell-reading)
+- 소리 (사람의 소리 감지)
+  - [FC-04 데모](http://www.instructables.com/id/Simple-FC-04-Sound-Sensor-Demo/)
