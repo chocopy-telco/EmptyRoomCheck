@@ -16,8 +16,9 @@ EmptyRoomCheck
     - 잠시 들어와서 전화 중
     - TV나 빔프로젝트만 켜둠 (빛이 있긴 있음)
     - 누군가 말을 하고 있음
-    
-  - lignt on (형광등 켜짐)
+    - 창문이 열려있고 밖에서 소리가 
+    
+  - lignt on (형광등 켜짐)
     - 말 없이 모니터만 보고 키보드 치는 소리만 남 (e.g.장애 분석중)
 
 사용할 센서 
@@ -25,7 +26,7 @@ EmptyRoomCheck
 센서 타입 선태 필요: analog or digital 
 
 - 조도 (CDS, Photoresistor sensor)
-  - LM393
+  - [광센서 사용 예](https://pimylifeup.com/raspberry-pi-light-sensor/)
   - [light sensor 사용 예제](https://learn.adafruit.com/basic-resistor-sensor-reading-on-raspberry-pi/basic-photocell-reading)
 - 소리 (사람의 소리 감지)
   - [FC-04 데모](http://www.instructables.com/id/Simple-FC-04-Sound-Sensor-Demo/)
