@@ -26,8 +26,7 @@ EmptyRoomCheck
 센서 타입 선태 필요: analog or digital 
 
 - 조도 (CDS, Photoresistor sensor)
-
-  - [광센서 사용 예](https://pimylifeup.com/raspberry-pi-light-sensor/)
+  - [광센서 사용 예](https://pimylifeup.com/raspberry-pi-light-sensor/)
   - [light sensor 사용 예제](https://learn.adafruit.com/basic-resistor-sensor-reading-on-raspberry-pi/basic-photocell-reading)
   
 - 소리 (사람의 소리 감지)
