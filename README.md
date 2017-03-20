@@ -23,7 +23,7 @@ EmptyRoomCheck
 
 사용할 센서 
 ---------
-센서 타입 선태 필요: analog or digital 
+센서 타입 선택 필요: analog or digital 
 
 - 조도 (CDS, Photoresistor sensor)
   - [광센서 사용 예](https://pimylifeup.com/raspberry-pi-light-sensor/)
