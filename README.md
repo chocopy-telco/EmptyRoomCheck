@@ -41,12 +41,12 @@ SYSTEM
 ##### Server process
 
 - Python 3.x
-  - If killed, then send slack message
+  - If killed, then send slack message (with Slacker)
 
   
 - Web with Django 1.6.x
 
 
-- DB 
-  - Raspberrypi: redislite, redis collections 
+- DB library
+  - Raspberrypi: redislite, redis_collections 
   - Web: Django-redis
