@@ -44,7 +44,7 @@ SYSTEM
   - If killed, then auto restart and send slack message (with Slacker)
 
   
-- Web with Django 1.6.x
+- Web with Nginx & Django 1.6.x
 
 
 - DB library
