@@ -36,3 +36,17 @@ EmptyRoomCheck
 SYSTEM
 ------
 ![alt tag](https://raw.githubusercontent.com/chocopy-telco/EmptyRoomCheck/master/empty_room.mmd.png)
+
+
+##### Server process
+
+- Python 3.x
+  - If killed, then send slack message
+
+  
+- Web with Django 1.6.x
+
+
+- DB 
+  - Raspberrypi: redislite, redis collections 
+  - Web: Django-redis
