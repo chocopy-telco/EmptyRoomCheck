@@ -32,3 +32,8 @@ EmptyRoomCheck
 - 소리 (사람의 소리 감지)
 
   - [FC-04 데모](http://www.instructables.com/id/Simple-FC-04-Sound-Sensor-Demo/)
+
+
+SYSTEM
+------
+![alt tag](https://raw.githubusercontent.com/chocopy-telco/EmptyRoomCheck/master/empty_room.mmd.png)
