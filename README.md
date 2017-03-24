@@ -41,7 +41,7 @@ SYSTEM
 ##### Server process
 
 - Python 3.x
-  - If killed, then send slack message (with Slacker)
+  - If killed, then auto restart and send slack message (with Slacker)
 
   
 - Web with Django 1.6.x
