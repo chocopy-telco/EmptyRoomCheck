@@ -40,9 +40,10 @@ SYSTEM
 
 ##### Server process
 
-- Python 3.x
-  - If killed, then auto restart and send slack message (with Slacker)
-
+- Main process with Python 3.x
+  - raspberry pi connection check
+  - django webserver daemon check 
+  
   
 - Web with Nginx & Django 1.6.x
 
@@ -50,3 +51,4 @@ SYSTEM
 - DB library
   - Raspberrypi: redislite, redis_collections 
   - Web: Django-redis
+  - Main Server : redis
