@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import redis
 import sys
 
@@ -9,22 +8,27 @@ def main():
 
         ######################
         # 1. module id
-        # 2. value from sensor
+        # 2. status from sensor
         # 3. current time (disconnect check)
         ######################
-        r.hmset('1', {'value': '99', 'curr': '134923802342342'})  # insert
-        r.hmset('2', {'value': '1', 'curr': '134923802342344'})
-        r.hmset('3', {'value': '292', 'curr': '134923802342347'})
+        r.hmset('1', {'status': '1', 'curr': '134923802342342'})  # set
+        r.hmset('2', {'status': '1', 'curr': '134923802342344'})
+        r.hmset('3', {'status': '0', 'curr': '134923802342347'})
 
         print('# HGET')
-        print(r.hget('1', 'value'), r.hget('1', 'curr'))  # select
-        print(r.hget('2', 'value'), r.hget('2', 'curr'))
-        print(r.hget('3', 'value'), r.hget('3', 'curr'))
+        print(r.hget('1', 'status'), r.hget('1', 'curr'))  # get
+        print(r.hget('2', 'status'), r.hget('2', 'curr'))
+        print(r.hget('3', 'status'), r.hget('3', 'curr'))
 
-        print('# HMGET')
-        print(r.hmget('1', {'curr', 'value'}))  # select
-        print(r.hmget('2', {'value', 'curr'}))
-        print(r.hmget('2', {'value', 'curr'}))
+        print('\n# HMGET')
+        print(r.hmget('1', {'curr', 'status'}))  # get
+        print(r.hmget('2', {'status', 'curr'}))
+        print(r.hmget('3', {'status', 'curr'}))
+
+        if r.hget('1', 'status') == b'1':
+            print('\n[1] Room Occupied')
+        else:
+            print('\n[1] Room Available')
 
     except Exception as ex:
         print('Error:', ex)
