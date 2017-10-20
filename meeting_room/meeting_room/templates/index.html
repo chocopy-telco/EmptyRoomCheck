@@ -1,0 +1,48 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Meeting room check</title> 
+  <meta http-equiv="refresh" content="5">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="{% static "image/favicon.ico" %}" type="image/x-icon">
+  <link rel="icon" href="{% static "image/favicon.ico" %}" type="image/x-icon">
+  <link rel="stylesheet" href="{% static "components/font-awesome/css/font-awesome.min.css" %}">
+
+
+  <style>
+    table {
+      border:1px solid gray;
+      border-collapse: collapse;
+    }
+    th {
+      background-color: #d0d0d0;
+      font-weight:bold;
+    }
+    th,td{
+      border:1px solid gray;
+      padding:5px;
+    }
+  </style>
+</head>
+
+<body>
+  <i class="fa fa-camera-retro"></i>
+  <table align="center">
+    <tr>
+      <th width=100 height=30>회의실</th>
+      <th>상태</th>
+    </tr>
+    <tr>
+      <td align="center" width=100 height=30>4B</td>
+      {% if is_empty %}
+        <td align="center" width=100 height=30 bgcolor="#007ef2">비어있음</td>
+      {% else %}
+        <td align="center" width=100 height=30 bgcolor="#ff0000">사용 중</td>
+      {% endif %}
+    </tr>
+  </table>
+</body>
+</html>
