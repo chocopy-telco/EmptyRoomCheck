@@ -12,20 +12,18 @@ def index(request):
     port = getattr(settings, 'RS_PORT', 'def_port')
     pw = getattr(settings, 'RS_PASSWORD', 'def_password')
     redis_connection = StrictRedis(host=ip, port=port, db=0, password=pw)
-    r = List(redis=redis_connection, key='rp3:00000000448f542820170525')
-    #r = List(redis=redis_connection, key='rp3:00000000448f5428170524')
+    r = List(redis=redis_connection, key="rp3:00000000448f5428")
 
-    lv = r[-61:-1]  # light value, latest 60 items
-    lv.sort()
-    cv = lv[20:40]  # calc value, middle 20 items
-    cv_avg = reduce(lambda x, y: x + y, cv) / len(cv)
-    # TODO : curr time check
-    is_empty = False if cv_avg < 1500 else True
-    # True : empty
-    # False: be in use
-    print(cv_avg, is_empty)
+    latest_val = r[-60:-1]  # last 60 sec
+    latest_val.sort()
+    middle_val = latest_val[20:40]  # middle of value
+    avg_val = reduce(lambda x, y: x + y, middle_val) / len(middle_val)
+    # is_empty = False if avg_val < 1800 else True
+    is_empty = False if avg_val < 2200 else True
+    print(avg_val, is_empty)
  
     context = {
         'is_empty': is_empty,
+        'avg': avg_val,
     }
     return render(request, 'index.html', context)
